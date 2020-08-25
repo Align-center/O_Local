@@ -1,0 +1,2 @@
+#On arrete le routing pour tous le dossier backOffice
+RewriteEngine Off

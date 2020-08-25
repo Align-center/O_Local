@@ -1,0 +1,19 @@
+<main class="container-xl">
+
+    <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+    <h1 class="ml-5 ml-md-auto text-left">Envoyer une newletter</h1>
+
+
+    <form action="" method="post" class='text-center'>
+
+        <input type="text" name="Title" id="title" class='form-control w-25 mx-auto mb-4' placeholder='Titre de la newsletter'>
+
+        <textarea name="content" id="summernote" cols="60" rows="10"></textarea>
+
+        <input type="submit" value="Envoyer" class='btn btn-info mt-4' >
+    </form>
+
+</main>
+
+</body>
+</html>

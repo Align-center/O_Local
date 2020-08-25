@@ -1,0 +1,42 @@
+<main class="container-xl">
+
+<p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+<h1 class="ml-5 ml-md-auto text-left">Ajout d'un administrateur</h1>
+
+<form action='' method='POST'>
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+        <label for="first_name">Prénom</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+        </div>
+
+        <div class="form-group col-md-6">
+        <label for="last_name">Nom</label>
+        <input type="text" class="form-control" id="last_name" name="last_name">
+        </div>
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+        <label for="login">Identifiant</label>
+        <input type="text" class="form-control" id="login" name="login">
+        </div>
+
+        <div class="form-group col-md-6">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="password">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+
+    <p class='text-center text-danger'><?= $error ?></p>
+    <p class='text-center text-success'><?= $success ?></p>
+
+</main>
+
+</body>
+</html>

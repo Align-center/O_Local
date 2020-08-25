@@ -1,0 +1,53 @@
+<main class="container-xl">
+
+    <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+    <h1 class="ml-5 ml-md-auto text-left">Edition du dernier menu</h1>
+
+    <p class="text-center text-success"><?=  $success ?></p>
+
+    <form action='' method='POST'>
+
+        <?php foreach($products as $product): ?>
+
+            <?php if ( $product['category'] != 'Dessert'): ?>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-8">
+                        <label for="<?= htmlspecialchars($product['category']) ?>"><?= htmlspecialchars($product['category']) ?> du jour</label>
+                        <input type="text" class="form-control" id="<?= htmlspecialchars($product['category']) ?>" name="<?= htmlspecialchars($product['category']) ?>" value='<?= htmlspecialchars($product['name']) ?>'>
+                    </div>
+
+                    <div class="form-group col-md">
+                        <label for="<?= htmlspecialchars($product['category']) ?>_price">Prix</label>
+                        <input type="text" class="form-control" id="<?= htmlspecialchars($product['category']) ?>_price" name="<?= htmlspecialchars($product['category']) ?>_price" value='<?= htmlspecialchars($product['price']) ?>'>
+                    </div>
+
+                    <input type="hidden" name="<?= htmlspecialchars($product['category']) ?>_id" value="<?= htmlspecialchars($product['id']) ?>">
+                </div>
+            <?php else: ?>
+                <div class="form-row">
+
+                    <div class="form-group col-md-8">
+                        <label for="<?= htmlspecialchars($product['category']) ?>"><?= htmlspecialchars($product['category']) ?> du jour</label>
+                        <input type="text" class="form-control" id="<?= htmlspecialchars($product['category']) ?>" name="<?= htmlspecialchars($product['category']) ?>[]" value='<?= htmlspecialchars($product['name']) ?>'>
+                    </div>
+
+                    <div class="form-group col-md">
+                        <label for="<?= htmlspecialchars($product['category']) ?>_price">Prix</label>
+                        <input type="text" class="form-control" id="<?= htmlspecialchars($product['category']) ?>_price" name="<?= htmlspecialchars($product['category']) ?>_prices[]" value='<?= htmlspecialchars($product['price']) ?>'>
+                    </div>
+
+                    <input type="hidden" name="<?= htmlspecialchars($product['category']) ?>_id[]" value="<?= htmlspecialchars($product['id']) ?>">
+                </div>
+            <?php endif; ?>
+
+        <?php endforeach; ?>
+
+        <button type="submit" class="btn btn-primary">Modifier</button>
+    </form>
+
+</main>
+
+</body>
+</html>

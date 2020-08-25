@@ -1,0 +1,105 @@
+<main class="container-xl">
+
+    <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+    <h1 class="ml-5 ml-md-auto text-left">Ajout d'un menu</h1>
+
+    <p class='text-center text-success'><?= $success ?></p>
+
+    <form action='' method='POST'>
+
+        <!-- PLAT DU JOUR -->
+        <div class="form-row">
+
+            <div class="form-group col-md-8">
+                <label for="dish">Plat du jour</label>
+                <input type="text" class="form-control" id="dish" name="dish">
+            </div>
+
+            <div class="form-group col-md">
+                <label for="plat_price">Prix</label>
+                <input type="text" class="form-control" id="last_name" name="dish_price">
+            </div>
+        </div>
+
+        <!-- PATE DU JOUR -->
+        <div class="form-row">
+
+            <div class="form-group col-md-8">
+                <label for="pasta">Pâte du jour</label>
+                <input type="text" class="form-control" id="pasta" name="pasta">
+            </div>
+
+            <div class="form-group col-md">
+                <label for="pasta_price">Prix</label>
+                <input type="text" class="form-control" id="pasta_price" name="pasta_price">
+            </div>
+        </div>
+
+        <!-- TARTINE DU JOUR -->
+        <div class="form-row">
+
+            <div class="form-group col-md-8">
+                <label for="toast">Tartine du jour</label>
+                <input type="text" class="form-control" id="toast" name="toast">
+            </div>
+
+            <div class="form-group col-md">
+                <label for="toast_price">Prix</label>
+                <input type="text" class="form-control" id="toast_price" name="toast_price">
+            </div>
+        </div>
+
+        <!-- SALADE DU JOUR -->
+        <div class="form-row">
+
+            <div class="form-group col-md-8">
+                <label for="salad">Salade du jour</label>
+                <input type="text" class="form-control" id="salad" name="salad">
+            </div>
+
+            <div class="form-group col-md">
+                <label for="salad_price">Prix</label>
+                <input type="text" class="form-control" id="salad_price" name="salad_price">
+            </div>
+        </div>
+
+        <!-- SANDWICH DU JOUR -->
+        <div class="form-row">
+
+            <div class="form-group col-md-8">
+                <label for="sandwich">Sandwich du jour</label>
+                <input type="text" class="form-control" id="sandwich" name="sandwich">
+            </div>
+
+            <div class="form-group col-md">
+                <label for="sandwich_price">Prix</label>
+                <input type="text" class="form-control" id="sandwich_price" name="sandwich_price">
+            </div>
+        </div>
+
+        <!-- DESSERTS DU JOUR -->
+
+        <?php for ($i = 1; $i < 4; $i++): ?>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-8">
+                    <label for="dessert<?= $i ?>">Dessert du jour</label>
+                    <input type="text" class="form-control" id="dessert<?= $i ?>" name="desserts[]">
+                </div>
+
+                <div class="form-group col-md">
+                    <label for="desserts_prices<?= $i ?>">Prix</label>
+                    <input type="text" class="form-control" id="desserts_prices<?= $i ?>" name="desserts_prices[]">
+                </div>
+            </div>
+        <?php endfor; ?>
+        
+
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+
+</main>
+
+</body>
+</html>

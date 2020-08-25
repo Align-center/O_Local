@@ -1,0 +1,23 @@
+    <main class="container-xl">
+
+        <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+        <h1 class="ml-5 ml-md-auto text-left">Contenu de la page d'accueil</h1>
+
+        <?php foreach($homeContent as $content): ?>
+            <div class="card mb-3 col p-0">
+
+                <div class="card-header bg-dark text-white container-fluid"><?= htmlspecialchars($content['title']) ?></div>
+
+                <div class="card-body">
+
+                    <p class="w-80"><?= htmlspecialchars($content['content']) ?></p>
+
+                    <a href="editHomeContent.php?id=<?= htmlspecialchars($content['id']) ?>">Modifier le contenu</a>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+    </main>
+
+</body>
+</html>

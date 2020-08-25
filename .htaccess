@@ -1,0 +1,5 @@
+#Routing et conditions de désactivation pour les extensions de fichier (cf. l.4)
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !(\.jpg|\.jpeg|\.css|\.js|\.svg|\.png)$ [NC]
+RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]

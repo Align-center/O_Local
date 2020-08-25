@@ -1,0 +1,84 @@
+<main class="container-xl" id='gallery'>
+
+    <script src="https://kit.fontawesome.com/24808d1de8.js" crossorigin="anonymous"></script>
+
+    <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+    <h1 class="ml-5 ml-md-auto text-left">Contenu de la galerie</h1>
+
+    <button type="button" class="btn btn-info mb-4" data-toggle="modal" data-target="#formModal">Ajouter une image au carousel</button>
+
+    <p class='text-success'><?= $success ?></p>
+    <p class='text-danger'><?= $error ?></p>
+
+    <table class="table table-striped table-hover">
+
+        <thead class='thead-dark'>
+
+            <tr>
+
+                <th scope="col" class='w-10'>#</th>
+                <th scope="col" class='w-30'>Nom de l'image</th>
+                <th scope="col" class='w-50'>Aperçu</th>
+                <th scope="col" class='w-10'>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        <?php foreach ($galleryContent as $content): ?>
+
+            <tr>
+
+                <th scope="row"><?= $count ?></th>
+                <td><?= htmlspecialchars($content['img_alt']) ?></td>
+                <td><img src="../src/img/carousel/<?= htmlspecialchars($content['img_path']) ?>" alt=""></td>
+                <td><a href="removeImage.php?id=<?= htmlspecialchars($content['id']) ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+            </tr>
+
+            <?php $count++; ?>
+        <?php endforeach; ?>
+        
+        </tbody>
+    </table>
+
+    <!-- MODAL ajout d'image-->
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                
+                    <form action='' method='POST' enctype="multipart/form-data">
+                        <div class="form-row">
+
+                            <label for="imgFile">Image à ajouter : </label>
+                            <input type="file" class="form-control-file mb-3" id="imgFile" name='imgFile'>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+
+                                <label for="imgAlt">Description rapide de l'image</label>
+                                <input type="text" class="form-control" id="imgAlt" name="imgAlt">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

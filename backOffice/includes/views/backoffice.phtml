@@ -1,0 +1,86 @@
+<main class="container-xl">
+
+    <p class="text-right mb-5 lead">Bienvenue, <?= htmlspecialchars($_SESSION['admin']['name']) ?></p>
+    <h1 class="text-left">Accueil</h1>
+
+    <div class="row mb-sm-4 mx-3">
+
+        <!--Card visualisation rapide-->
+        <div class="card mb-3 col mr-sm-2 p-0 w-10">
+
+            <div class="card-header bg-dark text-white container-fluid">Visualisation rapide</div>
+
+            <div class="card-body">
+
+                <a href='../' class="btn btn-info btn-block">Retour à votre site</a>
+            </div>
+        </div>
+
+        <!--Card action rapide-->
+        <div class="card mb-3 col-xs-12 col-sm-8 ml-sm-2 p-0">
+
+            <div class="card-header bg-dark text-white container-fluid">Action rapide</div>
+
+            <div class="card-body">
+
+                <a href='menus.php' class="btn btn-info btn-block">Ajouter un menu</a>
+
+                <a href='mailList.php' class="btn btn-info btn-block">Envoyer une newsletter</a>
+
+                <a href='addAdmin.php' class="btn btn-info btn-block">Ajouter un administrateur</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+    
+        <!-- CARTE MENU -->
+        <div class="card-header bg-dark text-white container-fluid mx-3">Menu du <?= htmlspecialchars($menu['formatDate']) ?></div>
+
+        <!--Card plats -->
+        <div class="card mt-2 col-lg-8 mx-3 p-0">
+
+            <div class="card-header bg-dark text-white container-fluid">Plat salés</div>
+
+            <div class="card-body">
+                <ul>
+
+                    <?php foreach ($products as $product): ?>
+
+                        <?php if ($product['category'] != 'Dessert'): ?>
+
+                            <li><?= htmlspecialchars($product['category']) ?> du jour : <?= htmlspecialchars($product['name']) ?> - <?= htmlspecialchars($product['price']) ?>€</li>
+                        <?php endif;?>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+
+        <!--Card desserts-->
+        <div class="card mt-2 col ml-lg-2 mx-3 p-0">
+
+            <div class="card-header bg-dark text-white container-fluid">Desserts</div>
+
+            <div class="card-body">
+                <ul>
+
+                    <?php foreach ($products as $product): ?>
+
+                        <?php if($product['category'] == 'Dessert'): ?>
+
+                            <li><?= htmlspecialchars($product['category']) ?> du jour : <?= htmlspecialchars($product['name']) ?> - <?= htmlspecialchars($product['price']) ?>€</li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+</main>
+
+</body>
+</html>

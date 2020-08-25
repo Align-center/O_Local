@@ -1,0 +1,1087 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: 'Lato';
+    color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Karma';
+    margin: 0;  
+}
+
+h1 {
+    font-size: 50px;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 38px;
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 28px;
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 21px;
+    font-size: 2.1rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Karma';
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.stopScolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+/*
+$$\   $$\                           $$\                     
+$$ |  $$ |                          $$ |                    
+$$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
+$$$$$$$$ |$$  __$$\  \____$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
+$$  __$$ |$$$$$$$$ | $$$$$$$ |$$ /  $$ |$$$$$$$$ |$$ |  \__|
+$$ |  $$ |$$   ____|$$  __$$ |$$ |  $$ |$$   ____|$$ |      
+$$ |  $$ |\$$$$$$$\ \$$$$$$$ |\$$$$$$$ |\$$$$$$$\ $$ |      
+\__|  \__| \_______| \_______| \_______| \_______|\__|      */
+                                                            
+header {
+    background-color: #f0f0f0;
+}
+
+header div > a {
+    font-size: 38px;
+    font-size: 3.8rem;
+    margin: 25px 0 25px 30px;
+    margin : 2.5rem 0 2.5rem 3rem;
+    display: inline-block;
+}
+
+header button {
+    border: none;
+    background: none;
+    display: none;
+    font-size: 30px;
+    font-size: 3rem;
+    float: right;
+    margin: 25px 20px 0 0;
+    margin: 2.5rem 2rem 0 0;
+    outline: none;
+    cursor: pointer;
+}
+
+header nav {
+    margin: 35px 30px 0 0;
+    margin: 3.5rem 3rem 0 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    float: right;
+}
+
+header nav a {
+    margin: 0 25px;
+    margin: 0 2.5rem;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    position: relative;
+}
+
+header nav a:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #067790;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+a:hover:before {
+    visibility : visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+header nav a:not(.connect):not(#deconnect):hover {
+    color : #067790;
+}
+
+.connect, #deconnect {
+    color: #067790;
+}
+
+#deconnect {
+    color: firebrick;
+}
+
+header nav #deconnect:before {
+    background-color: firebrick;
+}
+
+.connect:hover {
+    color: hsl(191, 92%, 23%);
+}
+
+#deconnect:hover {
+    color: hsl(0, 68%, 35%);
+}
+                                                           
+/*
+$$\      $$\           $$\           
+$$$\    $$$ |          \__|          
+$$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
+$$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
+$$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
+$$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
+$$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
+\__|     \__| \_______|\__|\__|  \__|*/
+                                     
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX         HOME         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+                                    
+#home, #contact, #gallery, #menu, #connection, #unsubscribe {
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+}       
+
+#home article, #contact section, #gallery section, #menu section, #connection article, #unsubscribe article {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#home h1 {
+    margin-top: 50px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#home h2 {
+    color : #067790;
+    text-align: center;
+    margin-top: 15px;
+    margin-top: 1.5rem;
+}
+
+#home article div {
+    width : 60%;
+    margin: 50px auto 130px;
+    margin: 5rem auto 13rem;
+    position: relative;
+}
+
+#home article div .fas {
+    position: absolute;
+    font-size: 40px;
+    font-size: 4rem;
+    top: 50%;
+    cursor : pointer;
+    color: #067790;
+}
+
+#home article div .fa-chevron-left {
+    right: 105%;
+}
+
+#home article div .fa-chevron-right {
+    left: 105%;
+}
+
+#home p {
+    text-align: left;
+}
+
+#home img {
+    width: 38%;
+    border-radius: 50%;
+    vertical-align: top;
+    float: right;
+    margin-left: 20px;
+    margin-left: 2rem;
+    -webkit-shape-outside:circle();
+    shape-outside:circle();
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        CONTACT       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#contact {
+    text-align: center;
+}
+
+#contact h1 {
+    margin-top: 50px;
+    margin-top: 5rem;
+}
+
+#contact iframe {
+    width: 600px;
+    width: 60rem;
+    height: 270px;
+    height: 27rem;
+    display: block;
+    margin: 20px auto;
+    margin: 2rem auto;
+}
+
+#contact a {
+    margin: 7.5px 0;
+    margin: .75rem 0;
+    font-family: 'Lato';
+}
+
+#contact a[href*='mailto'] {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 7.5px auto;
+    margin: .75rem auto;
+}
+
+#contact div a {
+    margin: 12.5px 20px 55px;
+    margin : 1.25rem 2rem 5.5rem;
+    display: inline-block;
+}
+
+#booking a {
+    padding: 10px 20px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: #067790;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 40px;
+    margin: 0 auto 4rem;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+#booking a:hover {
+    background-color: hsl(191, 92%, 23%);
+}
+
+#booking p:first-of-type {
+    margin: 75px 0 50px;
+    margin: 7.5rem 0 5rem;
+}
+
+#booking p {
+    margin: 40px 0;
+    margin : 4rem 0;
+}
+
+#booking p span {
+    font-style: italic;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        GALLERY       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#gallery section article:last-of-type {
+    display: -ms-grid;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 6.5rem);
+    margin: 30px auto 20px;
+    margin: 3rem auto 2rem;
+}
+
+#gallery section article:last-of-type img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    PLACEMENT IMG GRID */
+
+#dish {
+    grid-area: 1 / 1 / 3 / 4;
+}
+
+#kitchen {
+    grid-area: 1 / 7 / 3 / 11 ;
+}
+
+#interior {
+    grid-area: 1 / 4 / 4 / 7;
+}
+
+#wine {
+    grid-area: 3 / 2 / 6 / 4;
+}
+
+#platter {
+    grid-area: 3 / 8 / 5 / 11;
+}
+
+#vegetables {
+    grid-area: 3 / 11 / 6 / 13;
+}
+
+#exterior {
+    grid-area: 4 / 4 / 5 / 7;
+}
+
+#leftSquare {
+    grid-area: 3 / 7 / 4 / 8;
+    background: #067790;
+}
+
+#middleSquare {
+    grid-area: 1 / 11 / 2 / 12;
+    background: #E6D2BB;
+}
+
+#rightSquare {
+    grid-area: 2 / 11 / 3 / 12;
+    background: #83CCA5;
+}
+
+.owl-carousel {
+    margin: 50px auto 0;
+    margin: 5rem auto 0;
+    width: 80%
+}
+
+.owl-carousel img{
+    max-width: 100%;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid #067790;
+    position: relative;
+}
+
+.owl-carousel button {
+    outline: none;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    font-size: 40px;
+    font-size: 4rem;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX         MENU         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#menu section {
+    padding: 0 0 9.5rem 0;
+    justify-content: space-around;
+}
+
+#menu h1 {
+    text-align: center;
+    margin: 50px 0;
+    margin: 5rem 0;
+    width: 100%;
+}
+
+#menu h1 > span {
+    color: #067790;
+}
+
+#menu article {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 30%;
+    margin: 25px 0;
+    margin: 2.5rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+#menu h3 {
+    margin: 0;
+}
+
+#menu .price {
+    color: #067790;
+}
+
+#menu hr {
+    width : 35%;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0 0 50px;
+    margin: 0 0 5rem;
+}
+
+#menu ul li {
+    width: 100%;
+}
+
+#menu ul li span {
+    float: right;
+    color: #067790;
+    margin-left: 50px;
+    margin-left: 5rem;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      CONNECTION      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#connection form, #estimate form {
+    width: 50%;
+    margin: 50px auto 250px;
+    margin: 5rem auto 25rem;
+    padding: 70px 20px 40px;
+    padding: 7rem 2rem 4rem;
+    background-color: #dadada;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#connection form div > button {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50%;
+    padding: 20px 0;
+    padding: 2rem 0;
+    border: none;
+    font-family: 'Lato';
+    outline: none;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.active {
+    background-color: #dadada;
+    pointer-events: none;
+}
+
+.inactive {
+    background-color: rgba(6, 117, 142, 0.5);
+    color: white;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.inactive:hover {
+    background-color: #067790;
+    border-bottom: .5px solid hsl(191, 92%, 23%);
+}
+
+.formLeft {
+    left: 0;
+    border-radius: 1rem 0 0 0;
+}
+
+.formRight {
+    right: 0;
+    border-radius: 0 1rem 0 0;
+}
+
+#connection form input, #estimate form * {
+    outline: none;
+}
+
+#connection fieldset, #estimate fieldset {
+    border : none;
+    position: relative;
+}
+
+#connection label {
+    display: block;
+    margin: 0 0 20px 0;
+    margin: 0 0 2rem 0;
+}
+
+#connection fieldset > input, #estimate fieldset > input {
+    padding: 10px 10px;
+    padding: 1rem 1rem;
+    width: 60%;
+    border-radius: .5rem;
+    border: none;
+}
+
+#connection input[type='submit'], #estimate input[type='submit'] {
+    padding: 10px 10px;
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #067790;
+    margin: 30px 0 0 0;
+    margin: 3rem 0 0 0;
+    color: white;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+#connection input[type='submit']:hover, #estimate input[type='submit']:hover {
+    background-color: hsl(191, 92%, 23%);
+}
+
+#connection fieldset > fieldset {
+    float: left;
+    width: 49%;
+}
+
+#phoneField {
+    width: 49%;
+    margin: 0 auto;
+}
+
+#connection #phone {
+    width: 95%;
+    margin: 0 0 20px 0;
+    margin: 0 0 2rem 0;
+}
+
+#connection fieldset > fieldset input {
+    width: 95%;
+}
+
+#connection input[type='checkbox'] {
+    width: auto;
+}
+
+#connection label[for='newsletter'] {
+    display: initial;
+}
+
+#connection small {
+    color :firebrick;
+    position: absolute;
+    width: 100%;
+    top: 85px;
+    top: 8.5rem;
+    left: 50%;
+}
+
+#connection span {
+    position: absolute;
+    width: 100%;
+    left: -50%;
+}
+
+.emptyField {
+    box-shadow : 0px 0px 15px rgba(178, 34, 34, 0.4);
+    box-shadow : inset 0px 0px 15px rgba(178, 34, 34, 0.4);
+}
+
+.formError {
+    color: firebrick;
+}
+
+.success {
+    color: #067790;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       TRAITEUR       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#caterer {
+    background-color: #fbfbfb;
+}
+
+#caterer section {
+    padding: 0 15px;
+    padding: 0 1.5rem;
+}
+
+#caterer > img, #estimate > img {
+    width: 100%;
+    height: 300px;
+    height: 30rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0rem -38rem;
+       object-position: 0rem -38rem;
+}
+
+#caterer h1, #caterer h2 {
+    text-align: center;
+    margin: 20px 0 40px;
+    margin: 2rem 0 4rem;
+}
+
+#caterer h2 {
+    color: #067790;
+    margin-bottom: 0;
+}
+
+#caterer h3 {
+    margin: 20px 0 0 0;
+    margin: 2rem 0 0 0;
+    font-weight: lighter;
+}
+
+#caterer section article div > img {
+    width: 25%;
+    border-radius: 1rem;
+}
+
+#caterer article > div {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+        align-items: flex-start;
+}
+
+#caterer section > h3 {
+    text-align: center;
+    margin: 50px 0 0 0;
+    margin: 5rem 0 0 0;
+}
+
+#caterer section > a {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #067790;
+    padding: 10px 20px;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    color: white;
+    margin: 20px auto;
+    margin: 2rem auto;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+#caterer section > a:hover {
+    background: hsl(191, 92%, 23%);
+}
+
+#caterer hr {
+    width: 70%;
+    border: .5px solid #067790;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    MODAL TRAITEUR    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#catererModal {
+    position: absolute;
+    width: 35%;
+    margin: 0 auto;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.705);
+}
+
+#catererModal div {
+    position: relative;
+    padding: 30px 20px;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+    top: 40%;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#catererModal .fas {
+    color: firebrick;
+    position: absolute;
+    top: 10px;
+    top: 1rem;
+    left: 10px;
+    left: 1rem;
+    cursor: pointer;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       ESTIMATE       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#estimate article h1 {
+    text-align: center;
+    margin: 30px 0 0 0;
+    margin: 3rem 0 0 0;
+}
+
+#estimate form {
+    padding: 40px 20px;
+    padding: 4rem 2rem;
+    margin: 20px auto;
+    margin: 2rem auto;
+}
+
+#estimate fieldset > input {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+#estimate input[type='submit'] {
+    display: block;
+    margin: 20px auto 0;
+    margin: 2rem auto 0;
+}
+
+#estimate textarea {
+    border-radius: 1rem;
+    border: .5px solid #aaa;
+    padding: 10px;
+    padding: 1rem;
+    resize: vertical;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      UNSUBSCRIBE     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#unsubscribe article {
+    text-align: center;
+}
+
+#unsubscribe h1 {
+    margin-top: 225px;
+    margin-top: 22.5rem;
+}
+
+
+#unsubscribe p:last-of-type {
+    margin-bottom: 300px;
+    margin-bottom: 30rem;
+}
+/*                                      
+$$$$$$$$\                   $$\                         
+$$  _____|                  $$ |                        
+$$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\  
+$$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\ 
+$$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
+$$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |      
+$$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
+\__|    \______/  \______/   \____/  \_______|\__|     */ 
+
+footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+footer hr {
+    width: 40%;
+}
+
+footer nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    margin: 30px auto 30px;
+    margin: 3rem auto 3rem;
+}
+
+footer nav a {
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+footer nav a:hover {
+    color: #067790;
+}
+
+footer small {
+    display: block;
+    margin-bottom: 5px;
+    margin-bottom: .5rem;
+}
+
+footer small a {
+    color: #067790;
+}
+
+/*
+$$\      $$\                 $$\ $$\                  $$$$$$\                                $$\                     
+$$$\    $$$ |                $$ |\__|                $$  __$$\                               \__|                    
+$$$$\  $$$$ | $$$$$$\   $$$$$$$ |$$\  $$$$$$\        $$ /  $$ |$$\   $$\  $$$$$$\   $$$$$$\  $$\  $$$$$$\   $$$$$$$\ 
+$$\$$\$$ $$ |$$  __$$\ $$  __$$ |$$ | \____$$\       $$ |  $$ |$$ |  $$ |$$  __$$\ $$  __$$\ $$ |$$  __$$\ $$  _____|
+$$ \$$$  $$ |$$$$$$$$ |$$ /  $$ |$$ | $$$$$$$ |      $$ |  $$ |$$ |  $$ |$$$$$$$$ |$$ |  \__|$$ |$$$$$$$$ |\$$$$$$\  
+$$ |\$  /$$ |$$   ____|$$ |  $$ |$$ |$$  __$$ |      $$ $$\$$ |$$ |  $$ |$$   ____|$$ |      $$ |$$   ____| \____$$\ 
+$$ | \_/ $$ |\$$$$$$$\ \$$$$$$$ |$$ |\$$$$$$$ |      \$$$$$$ / \$$$$$$  |\$$$$$$$\ $$ |      $$ |\$$$$$$$\ $$$$$$$  |
+\__|     \__| \_______| \_______|\__| \_______|       \___$$$\  \______/  \_______|\__|      \__| \_______|\_______/ */
+
+@media screen and (max-width:1000px) {
+
+    .container {
+        width: 100%;
+    }
+
+    #caterer > img, #estimate > img {
+        height: 15rem;
+        -o-object-position: 0rem -30rem;
+           object-position: 0rem -30rem;
+    }
+}
+
+@media screen and (max-width:950px) {
+
+    #connection fieldset > fieldset {
+        float: none;
+        margin: 0 auto 1.5rem;
+        padding: 0;
+    }
+
+    #phoneField, #connection fieldset > fieldset {
+        width: 60%;
+    }
+
+    #caterer section article  div > img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    header nav {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    header nav a {
+        margin: 0 1.5rem;
+    }
+
+    #home article div {
+        width: 70%;
+    }
+
+    #caterer > img, #estimate > img {
+        -o-object-position: 0rem -25rem;
+           object-position: 0rem -25rem;
+    }
+
+    #estimate form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    header button {
+        display: initial;
+    }
+
+    header nav.flex {
+        width: 100%;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 1.5rem 0;
+    }
+
+    #connection fieldset > input, #connection fieldset > fieldset, #phoneField {
+        width: 75%;
+    }
+
+    #estimate textarea {
+        width: 80%;
+    }
+
+    #contact iframe {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    #menu article {
+        width: 50%;
+    }
+
+    #gallery section article {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 6.5rem);
+    }
+
+    /* PLACEMENT PHOTO GRID */
+
+    #dish {
+        grid-area: 3 / 1 / 5 / 4;
+    }
+
+    #kitchen {
+        grid-area: 1 / 5 / 4 / 10;
+    }
+
+    #interior {
+        grid-area: 4 / 4 / 7 / 7;
+    }
+
+    #vegetables {
+        grid-area: 4 / 7 / 7 / 9;
+    }
+
+    #wine {
+        grid-area: 5 / 2 / 8 / 4;
+    }
+
+    #platter {
+        grid-area: 7 / 7 / 9 / 10;
+    }
+
+    #exterior {
+        grid-area: 8 / 3 / 10 / 7;
+    }
+
+    #leftSquare {
+        grid-area: 7 / 4 / 8 / 5;
+    }
+
+    #middleSquare {
+        grid-area: 7 / 5 / 8 / 6;
+    }
+
+    #rightSquare {
+        grid-area: 7 / 6 / 8 / 7;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    #menu article {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        text-align: center;
+    }
+
+    #menu article ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    #caterer > img, #estimate > img {
+        -o-object-position: 0rem -15rem;
+           object-position: 0rem -15rem;
+    }
+
+    #estimate form label {
+        display: block;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    header nav.flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 2rem 0 0 0;
+    }
+
+    #connection fieldset > input, #connection fieldset > fieldset, #phoneField {
+        width: 90%;
+    }
+
+    #estimate form fieldset select {
+        display: block;
+        margin: .5rem auto;
+    }
+
+    #gallery section article {
+        width: 90%;
+    }
+
+    #contact iframe {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    #menu section {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                    -ms-grid-row-align: center;
+                align-items: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    #home img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    #caterer > img, #estimate > img {
+        -o-object-position: 0rem -10rem;
+           object-position: 0rem -10rem;
+    }
+}

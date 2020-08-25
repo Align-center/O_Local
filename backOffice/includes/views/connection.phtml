@@ -1,0 +1,21 @@
+    <main class="container-xl">
+
+        <form action="" method="post" class="container-sm mx-auto text-center mt-5">
+
+            <label for="formGroupExampleInput" >Identifiant</label>
+            <input type="text" class="form-control w-25 mx-auto mb-3" id="formGroupExampleInput" name="login">
+
+            <label for="formGroupExampleInput" >Mot de passe</label>
+            <input type="password" class="form-control w-25 mx-auto" id="formGroupExampleInput" name="password">
+
+            <button class="btn btn-primary mt-3" type="submit">Se connecter</button>
+
+        </form> 
+
+        <p id='error' class='text-center text-danger mt-4'><?=htmlspecialchars($error)?></p>
+
+        <a href="../" class="btn btn-info btn-block mx-auto mt-5 w-25">Retourner au site</a>
+
+    </main>
+</body>
+</html>
